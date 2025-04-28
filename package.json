@@ -2,8 +2,10 @@
   "name": "cea",
   "version": "1.0.1",
   "main": "./bin/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
     "dev": "tsc -w",
     "build": "tsc && node ./bin/scripts/postBuild.js"
   },
@@ -19,7 +21,7 @@
     "@types/node": "^22.15.2",
     "eslint": "^9.25.1",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.31.0"
+    "typescript-eslint": "^8.31.1"
   },
   "dependencies": {
     "chalk": "^5.4.1",
