@@ -6,7 +6,7 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install -g cea-lite
@@ -20,7 +20,7 @@ npx cea-lite init my-app
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ```bash
 cea-lite init <project-name> [options]
@@ -37,13 +37,13 @@ cea-lite init <project-name> [options]
 
 ---
 
-## 🧪 Example
+## Example
 
 ```bash
 cea-lite init my-api -W --folder ./projects
 ```
 
-📁 Creates the project at `./projects/my-api` with the following folder structure:
+Creates the project at `./projects/my-api` with the following folder structure:
 
 ```
 my-api/
@@ -65,7 +65,7 @@ my-api/
 
 ---
 
-## 🛠 Folder Structure
+## Folder Structure
 
 When using `--with-folders`, the following structure is scaffolded under `src/`:
 
@@ -82,7 +82,7 @@ When using `--with-folders`, the following structure is scaffolded under `src/`:
 
 ---
 
-## 🔧 Development
+## Development
 
 If you'd like to contribute or run it locally:
 
@@ -102,13 +102,13 @@ cea-lite init test-app
 
 ---
 
-## 📄 License
+## License
 
 MIT
 
 ---
 
-## 📚 Resources
+## Resources
 
 - [GitHub Repository](https://github.com/Oussema39/cea-cli)
 - [Report Issues](https://github.com/Oussema39/cea-cli/issues)
