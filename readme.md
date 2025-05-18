@@ -1,4 +1,4 @@
-# cea ⚡️
+# cea-lite ⚡️
 
 **Create Express App** — a lightweight CLI tool to scaffold a clean, organized Express.js project structure with ease.
 
@@ -9,13 +9,13 @@
 ## 📦 Installation
 
 ```bash
-npm install -g cea
+npm install -g cea-lite
 ```
 
 Or use directly with `npx`:
 
 ```bash
-npx cea init my-app
+npx cea-lite init my-app
 ```
 
 ---
@@ -23,7 +23,7 @@ npx cea init my-app
 ## 🚀 Usage
 
 ```bash
-cea init <project-name> [options]
+cea-lite init <project-name> [options]
 ```
 
 ### Arguments
@@ -40,7 +40,7 @@ cea init <project-name> [options]
 ## 🧪 Example
 
 ```bash
-cea init my-api -W --folder ./projects
+cea-lite init my-api -W --folder ./projects
 ```
 
 📁 Creates the project at `./projects/my-api` with the following folder structure:
@@ -91,20 +91,20 @@ git clone https://github.com/Oussema39/cea-cli.git
 cd cea-cli
 npm install
 npm run build
-npm link # Allows using 'cea' locally
+npm link # Allows using 'cea-lite' locally
 ```
 
 Now you can run:
 
 ```bash
-cea init test-app
+cea-lite init test-app
 ```
 
 ---
 
 ## 📄 License
 
-ISC
+MIT
 
 ---
 

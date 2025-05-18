@@ -1,5 +1,5 @@
 {
-  "name": "create-express-app",
+  "name": "cea-lite",
   "version": "1.0.0",
   "main": "./bin/index.js",
   "author": "Oussema Heni",
@@ -13,7 +13,7 @@
     "build": " npm run clean && tsc && node ./bin/scripts/postBuild.js"
   },
   "bin": {
-    "cea": "./bin/index.js"
+    "cea-lite": "./bin/index.js"
   },
   "files": [
     "bin"
@@ -27,7 +27,7 @@
     "typescript-eslint": "^8.31.1"
   },
   "dependencies": {
-    "chalk": "^5.4.1",
+    "chalk": "^4.1.2",
     "commander": "^13.1.0"
   },
   "keywords": [

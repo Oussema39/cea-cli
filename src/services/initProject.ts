@@ -15,7 +15,7 @@ export const initProject = (
 ) => {
   if (!appName) {
     console.log(chalk.red("❌ Please provide a project name:"));
-    console.log(chalk.blueBright("Example: create-express-app my-app"));
+    console.log(chalk.blueBright("Example: cea-lite init my-app"));
     process.exit(1);
   }
 

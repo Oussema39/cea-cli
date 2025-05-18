@@ -1,5 +1,5 @@
-import { Chalk } from "chalk";
+import { Instance } from "chalk";
 
-const chalk = new Chalk({ level: 1 });
+const chalk = new Instance({ level: 1 });
 
 export default chalk;
