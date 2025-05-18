@@ -1,7 +1,10 @@
 {
-  "name": "cea",
-  "version": "1.0.1",
+  "name": "create-express-app",
+  "version": "1.0.0",
   "main": "./bin/index.js",
+  "author": "Oussema Heni",
+  "license": "MIT",
+  "description": "CLI tool to quickly scaffold a new Express.js app with TypeScript and best practices.",
   "scripts": {
     "clean": "rimraf bin",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,19 +15,38 @@
   "bin": {
     "cea": "./bin/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "files": [
+    "bin"
+  ],
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "@types/node": "^22.15.2",
     "eslint": "^9.25.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.31.1"
   },
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^13.1.0"
-  }
+  },
+  "keywords": [
+    "cli",
+    "express",
+    "create-express-app",
+    "express-generator",
+    "express-cli",
+    "nodejs",
+    "scaffold",
+    "boilerplate",
+    "project-generator"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oussema39/cea-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/Oussema39/cea-cli/issues"
+  },
+  "homepage": "https://github.com/Oussema39/cea-cli#readme"
 }
