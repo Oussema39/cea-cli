@@ -2,12 +2,12 @@
   "name": "cea",
   "version": "1.0.1",
   "main": "./bin/index.js",
-  "type": "module",
   "scripts": {
+    "clean": "rimraf bin",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "dev": "tsc -w",
-    "build": "tsc && node ./bin/scripts/postBuild.js"
+    "build": " npm run clean && tsc && node ./bin/scripts/postBuild.js"
   },
   "bin": {
     "cea": "./bin/index.js"

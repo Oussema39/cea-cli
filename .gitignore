@@ -6,6 +6,7 @@ yarn-error.log*
 
 # TypeScript compiled output
 dist/
+bin/
 *.js
 *.js.map
 
@@ -35,3 +36,4 @@ coverage/
 
 # Build artifacts
 build/
+bin/

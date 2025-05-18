@@ -2,10 +2,10 @@
   "name": "<APP_NAME>",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
     "dev": "nodemon -e ts --exec \"npm run compile\"",
-    "compile": "tsc && node --env-file=.env --env-file=.env.example dist/index.js",
+    "compile": "tsc && node --env-file=.env --env-file=.env.example dist/src/index.js",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "format": "prettier --write ."

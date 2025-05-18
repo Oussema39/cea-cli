@@ -17,6 +17,7 @@ coverage/
 
 # Optional npm cache directory
 .npm
+package-lock.json
 
 # dotenv environment variable file
 .env

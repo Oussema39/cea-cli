@@ -1,5 +1,4 @@
 import express, { Application } from "express";
-import routes from "./routes/index";
 import cors from "cors";
 const app: Application = express();
 
@@ -14,6 +13,8 @@ app.use(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/", routes);
+app.use("/", (_,res) => {
+  return res.status(200).send("Hello Fellow Developer!");
+});
 
 export default app;

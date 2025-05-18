@@ -7,8 +7,9 @@ const initCommand = new Command(COMMAND_NAMES.INIT);
 initCommand
   .argument("<project-name>", "The name of the express project")
   .option("--folder", "The path where the project will be created", ".")
-  .action((name) => {
-    initProject(name);
+  .option("-W, --with-folders", "Include basic folders struture", false)
+  .action((name, options) => {
+    initProject(name, options);
   });
 
 export default initCommand;
