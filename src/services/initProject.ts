@@ -1,17 +1,22 @@
 import fs from "fs";
 import { join } from "path";
-import { copyRecursiveSync } from "../utils/copyRecursive.js";
-import { FOLDER_STRUCTURE } from "../utils/constants.js";
+import {
+  FOLDER_STRUCTURE,
+  TEMPLATES_NAMES,
+  TemplatesRepo,
+} from "../utils/constants.js";
 import chalk from "chalk";
+import { downloadMyTemplate } from "../utils/downloadExpressTemplate.js";
 
 interface InitProjectOptions {
-  folder?: string;
+  targetDir?: string;
   withFolders?: boolean;
+  template?: TEMPLATES_NAMES;
 }
 
-export const initProject = (
+export const initProject = async (
   appName: string | undefined,
-  options?: InitProjectOptions
+  options: InitProjectOptions
 ) => {
   if (!appName) {
     console.log(chalk.red("❌ Please provide a project name:"));
@@ -20,8 +25,7 @@ export const initProject = (
   }
 
   const currentPath = process.cwd();
-  const targetPath = join(currentPath, options?.folder ?? "", appName);
-  const templatePath = join(__dirname, "..", "templates", "starter");
+  const targetPath = join(currentPath, options?.targetDir ?? "", appName);
 
   if (fs.existsSync(targetPath)) {
     console.log(chalk.red(`❌ Folder "${appName}" already exists.`));
@@ -29,7 +33,15 @@ export const initProject = (
   }
 
   try {
-    copyRecursiveSync(templatePath, targetPath);
+    // Create empty space (line)
+    console.log();
+    await downloadMyTemplate(
+      `github:${TemplatesRepo}/${options.template ?? TEMPLATES_NAMES.STARTER}`,
+      {
+        dir: targetPath,
+      },
+      options.template
+    );
 
     const packageJsonPath = join(targetPath, "package.json");
     const packageJson = fs.readFileSync(packageJsonPath, "utf-8");
@@ -54,9 +66,10 @@ export const initProject = (
       chalk.blueBright(`✅ Project "${appName}" created successfully.`),
       "\n"
     );
-    console.log(`👉 cd ${appName}`);
+    console.log(`👉 cd ${targetPath}`);
     console.log(`👉 npm install`);
     console.log(`👉 npm run dev`);
+    console.log(`\nhappy development JOURNEYYY!`);
   } catch (err: unknown) {
     console.log(chalk.red("❌ Error copying project files:", err));
     process.exit(1);

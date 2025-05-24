@@ -8,11 +8,13 @@
 
 ## 📦 Installation
 
+Install globally via npm:
+
 ```bash
 npm install -g cea
 ```
 
-Or use directly with `npx`:
+Or use directly with `npx` without installing:
 
 ```bash
 npx cea init my-app
@@ -20,30 +22,59 @@ npx cea init my-app
 
 ---
 
-## 🚀 Usage
+## Usage
+
+### Initialize a new Express project
 
 ```bash
 cea init <project-name> [options]
 ```
 
-### Arguments
+#### Arguments
 
-- `<project-name>` – The name of the Express app you want to create (required).
+- `<project-name>` – The name of your Express app (required).
 
-### Options
+#### Options
 
-- `--folder <path>` – The path where the project will be created. Default: `.` (current directory).
-- `-W, --with-folders` – Include a basic folder structure inside `src/` to organize your code better.
+- `-D, --target-dir <path>` – Directory path where the project will be created. Default: current directory (`.`).
+- `-W, --with-folders` – Scaffold a basic folder structure inside `src/`.
+- `-T, --template <name>` – Choose a project template to use (default: `starter`).
 
 ---
 
-## 🧪 Example
+## Templates Support
+
+The CLI now supports multiple project templates hosted remotely.
+
+### List available templates
+
+To see which templates are available, run:
 
 ```bash
-cea init my-api -W --folder ./projects
+cea list
 ```
 
-📁 Creates the project at `./projects/my-api` with the following folder structure:
+This command fetches and displays all remote templates you can choose from.
+
+### Use a specific template
+
+To initialize your project with a specific template, use the `--template` option:
+
+```bash
+cea init my-app -T starter
+```
+
+If no template is specified, the default `starter` template will be used.
+
+---
+
+## Example
+
+```bash
+cea init my-api -W -D ./projects -T starter
+```
+
+This will create the project at `./projects/my-api` with the following folder structure:
 
 ```
 my-api/
@@ -65,11 +96,9 @@ my-api/
 
 ---
 
-## 🛠 Folder Structure
+## 🛠 Folder Structure (when using `--with-folders`)
 
-When using `--with-folders`, the following structure is scaffolded under `src/`:
-
-- `config/` – Configuration files (e.g., DB, environment)
+- `config/` – Configuration files (e.g., database, environment)
 - `constants/` – App-wide constants
 - `controllers/` – Request handlers and business logic
 - `helpers/` – Utility helper functions
@@ -84,17 +113,17 @@ When using `--with-folders`, the following structure is scaffolded under `src/`:
 
 ## 🔧 Development
 
-If you'd like to contribute or run it locally:
+To contribute or run locally:
 
 ```bash
 git clone https://github.com/Oussema39/cea-cli.git
 cd cea-cli
 npm install
 npm run build
-npm link # Allows using 'cea' locally
+npm link  # Link the CLI globally on your machine
 ```
 
-Now you can run:
+You can now run:
 
 ```bash
 cea init test-app
@@ -102,13 +131,13 @@ cea init test-app
 
 ---
 
-## 📄 License
+## License
 
 ISC
 
 ---
 
-## 📚 Resources
+## Resources
 
 - [GitHub Repository](https://github.com/Oussema39/cea-cli)
 - [Report Issues](https://github.com/Oussema39/cea-cli/issues)
@@ -116,4 +145,6 @@ ISC
 
 ---
 
-Made with ❤️ by [@Oussema39](https://github.com/Oussema39)
+Made with 💛
+
+---
